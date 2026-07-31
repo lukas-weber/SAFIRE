@@ -49,12 +49,6 @@ def timeout_mins(request):
         timeout = 5
     return timeout
 
-# TODO: configure CMake to configure the default AFQMC_EXEC and AFQMC_TEST_FILES
-@pytest.fixture(scope='session')
-def afqmc_exec():
-    # TODO: get default location for AFQMC_EXEC
-    return os.environ.get('AFQMC_EXEC')
-
 @pytest.fixture(scope='session')
 def test_files():
     # TODO: get default location for AFQMC_TEST_FILES
